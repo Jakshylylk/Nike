@@ -1,15 +1,15 @@
-body {
+/* body {
   background-image: url("https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_1584,c_limit/dce3629b-959d-43bc-b590-78ec1009cb70/nike-just-do-it.png");
   background-repeat: no-repeat;
   background-size: 100%;
-}
-.addProduct-ontainer {
+} */
+.addProduct-container {
   width: 30%;
   margin: 180px auto;
   border-radius: 20px;
   border: 2px solid black;
 }
-.addProduct-ontainer input {
+.addProduct-container form input {
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -18,6 +18,11 @@ body {
   border: none;
   background: rgba(255, 255, 255, 0.4);
 }
-.addProduct-ontainer input:focus {
+.addProduct-container form input:focus {
   background: white;
+}
+.addProduct-container form button {
+  width: 20%;
+  margin: 10px 200px;
+  padding: 10px;
 }
