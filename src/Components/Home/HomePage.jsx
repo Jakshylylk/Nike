@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./HomePage.css";
+import VideoNike from "./video/VideoNike.mp4";
 
 const HomePage = () => {
   return (
@@ -34,6 +35,11 @@ const HomePage = () => {
       <button class="button-89" role="button">
         <NavLink to="/list">SHOP ALL FLEECE</NavLink>
       </button>
+      <video
+        src={VideoNike}
+        autoPlay={true}
+        width="100%"
+        controls={true}></video>
     </>
   );
 };

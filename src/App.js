@@ -11,8 +11,13 @@ const App = () => {
       <Navbar />
       <MainRoutes />
       {/* <Footer /> */}
-      <Authorization />
+
+      {/* <Authorization /> */}
+
+
+  
     </ProductContextProvider>
+
   );
 };
 
