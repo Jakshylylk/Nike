@@ -110,6 +110,7 @@ const AddProduct = () => {
         </form>
       </div>
     </>
+
   );
 };
 

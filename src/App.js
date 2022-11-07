@@ -1,16 +1,17 @@
 import React from "react";
-import AddProduct from "./Components/Admin/AddProduct/AddProduct";
-import ProductCard from "./Components/Products/ProductCard/ProductCard";
-import ProductList from "./Components/Products/ProductList/ProductList";
-import ProductContextProvider from "./Context/ProductContextProvider";
+import Authorization from "./Components/Auth/Authorization";
+import Footer from "./Components/Footer/Footer";
+import Navbar from "./Components/NavBar/NavBar";
+import MainRoutes from "./MainRoutes";
 
 const App = () => {
   return (
-    <ProductContextProvider>
-      <AddProduct />
-      <ProductList />
-      {/* <ProductCard /> */}
-    </ProductContextProvider>
+    <div>
+      <Navbar />
+      <MainRoutes />
+      {/* <Footer /> */}
+      <Authorization />
+    </div>
   );
 };
 
