@@ -28,8 +28,8 @@ const ProductDetails = () => {
           </Swiper>
           <Swiper
             onSwiper={setThumbsSwiper}
-            spaceBetween={5}
-            slidesPerView={2}
+            spaceBetween={10}
+            slidesPerView={4}
             freeMode={true}
             watchSlidesProgress={true}
             className="mySwiper">
