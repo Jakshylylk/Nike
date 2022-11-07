@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Thumbs } from "swiper";
 import { Container, Grid, Paper } from "@mui/material";
+import "./ProductDetails.css";
 
 SwiperCore.use([Thumbs]);
 
@@ -27,8 +28,8 @@ const ProductDetails = () => {
           </Swiper>
           <Swiper
             onSwiper={setThumbsSwiper}
-            spaceBetween={10}
-            slidesPerView={4}
+            spaceBetween={5}
+            slidesPerView={2}
             freeMode={true}
             watchSlidesProgress={true}
             className="mySwiper">
