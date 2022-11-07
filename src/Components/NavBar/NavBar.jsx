@@ -158,19 +158,16 @@ function Navbar() {
             }}>
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map(page => (
-              <NavLink to="/">
-                <NavLink to="/add">
-                  <Button
-                    key={page}
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "black", display: "block" }}>
-                    {page}
-                  </Button>
-                </NavLink>
-              </NavLink>
-            ))}
+          <Box
+            sx={{
+              width: "60%",
+              display: "flex",
+              justifyContent: "space-around",
+            }}>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/list">Product List</NavLink>
+            <NavLink to="/add">Add Product</NavLink>
+            <NavLink to="/details">Details</NavLink>
           </Box>
           <Search sx={{ mr: "35px", color: "black" }}>
             <SearchIconWrapper>
