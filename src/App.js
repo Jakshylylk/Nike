@@ -10,7 +10,7 @@ const App = () => {
       <Navbar />
       <MainRoutes />
       {/* <Footer /> */}
-      <Authorization />
+      {/* <Authorization /> */}
     </div>
   );
 };
