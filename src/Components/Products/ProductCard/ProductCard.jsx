@@ -1,20 +1,49 @@
 import React from "react";
 import "./ProductCard.css";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { Button, CardActionArea, CardActions } from "@mui/material";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import MapsUgcIcon from "@mui/icons-material/MapsUgc";
+import { Grid } from "@mui/material";
 
 const ProductCard = ({ productObj }) => {
+  console.log(productObj);
   return (
     <>
-      <div className="card-container">
-        <div className="card">
-          <img className="main-img" src={productObj.img1} alt="" />
-          <div className="slide-img">
-            <img src={productObj.img2} alt="" />
-            <img src={productObj.img3} alt="" />
-            <img src={productObj.img4} alt="" />
-          </div>
-          <p>{productObj.description}</p>
-        </div>
-      </div>
+      <Card sx={{ maxWidth: 345, mt: "40px" }}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="200"
+            image={productObj.img1}
+            alt="green iguana"
+          />
+
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Цвет: {productObj.color}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              <Grid>
+                <h3 style={{ color: "black" }}>Описание:</h3>
+              </Grid>
+              {productObj.description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <Grid
+          sx={{
+            float: "right",
+            paddingRight: "20px",
+            paddingBottom: "20px",
+          }}>
+          <FavoriteBorderIcon sx={{ fontSize: 30 }} />
+          <MapsUgcIcon sx={{ fontSize: 30, ml: 1 }} />
+        </Grid>
+      </Card>
     </>
   );
 };

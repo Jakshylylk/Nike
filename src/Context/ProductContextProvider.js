@@ -29,6 +29,7 @@ const ProductContextProvider = ({ children }) => {
     } catch (error) {
       return error;
     }
+    readProduct();
   }
   // ? =================== CREATE FINISH =================
 
@@ -42,15 +43,15 @@ const ProductContextProvider = ({ children }) => {
       payload: res,
     });
   }
-  // readProduct();
 
   // ? =================== READ END ======================
-  // console.log(state.product);
+
   let productCloud = {
     addProduct,
     readProduct,
     productsArr: state.product,
   };
+  console.log(state);
   return (
     <productContext.Provider value={productCloud}>
       {children}

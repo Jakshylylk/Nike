@@ -56,58 +56,60 @@ const AddProduct = () => {
 
   return (
     <>
-      <div className="addProduct-container">
-        <form onSubmit={e => handleAdd(e)}>
-          <input
-            value={category}
-            onChange={e => setCategory(e.target.value)}
-            type="text"
-            placeholder="Категория"
-          />
-          <input
-            value={description}
-            onChange={e => setDescription(e.target.value)}
-            type="text"
-            placeholder="Описания"
-          />
-          <input
-            value={color}
-            onChange={e => setColor(e.target.value)}
-            type="text"
-            placeholder="Цвет"
-          />
-          <input
-            value={price}
-            onChange={e => setPrice(e.target.value)}
-            type="number"
-            placeholder="Цена"
-          />
-          <input
-            value={img1}
-            onChange={e => setImg1(e.target.value)}
-            type="text"
-            placeholder="Добавить 1 картинку"
-          />
-          <input
-            value={img2}
-            onChange={e => setImg2(e.target.value)}
-            type="text"
-            placeholder="Добавить 2 картинку"
-          />
-          <input
-            value={img3}
-            onChange={e => setImg3(e.target.value)}
-            type="text"
-            placeholder="Добавить 3 картинку"
-          />
-          <input
-            value={img4}
-            onChange={e => setImg4(e.target.value)}
-            type="text"
-            placeholder="Добавить 4 картинку"
-          />
-          <button type="submit">Добавить</button>
-        </form>
+      <div className="body">
+        <div className="addProduct-container">
+          <form onSubmit={e => handleAdd(e)}>
+            <input
+              value={category}
+              onChange={e => setCategory(e.target.value)}
+              type="text"
+              placeholder="Категория"
+            />
+            <input
+              value={description}
+              onChange={e => setDescription(e.target.value)}
+              type="text"
+              placeholder="Описания"
+            />
+            <input
+              value={color}
+              onChange={e => setColor(e.target.value)}
+              type="text"
+              placeholder="Цвет"
+            />
+            <input
+              value={price}
+              onChange={e => setPrice(e.target.value)}
+              type="number"
+              placeholder="Цена"
+            />
+            <input
+              value={img1}
+              onChange={e => setImg1(e.target.value)}
+              type="text"
+              placeholder="Добавить 1 картинку"
+            />
+            <input
+              value={img2}
+              onChange={e => setImg2(e.target.value)}
+              type="text"
+              placeholder="Добавить 2 картинку"
+            />
+            <input
+              value={img3}
+              onChange={e => setImg3(e.target.value)}
+              type="text"
+              placeholder="Добавить 3 картинку"
+            />
+            <input
+              value={img4}
+              onChange={e => setImg4(e.target.value)}
+              type="text"
+              placeholder="Добавить 4 картинку"
+            />
+            <button type="submit">Добавить</button>
+          </form>
+        </div>
       </div>
     </>
 
