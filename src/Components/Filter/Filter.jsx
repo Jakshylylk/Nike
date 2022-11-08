@@ -18,8 +18,8 @@ const Filter = ({ category, setCategory, price, setPrice }) => {
         name="radio-buttons-group"
         value={category}
         onChange={e => setCategory(e.target.value)}>
-        <FormControlLabel value="phone" control={<Radio />} label="Man" />
-        <FormControlLabel value="laptop" control={<Radio />} label="Woman" />
+        <FormControlLabel value="man" control={<Radio />} label="Man" />
+        <FormControlLabel value="woman" control={<Radio />} label="Woman" />
       </RadioGroup>
       <FormLabel id="demo-radio-buttons-group-label">По ценам</FormLabel>
       <Slider
