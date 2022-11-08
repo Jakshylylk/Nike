@@ -11,6 +11,8 @@ import {
   Box,
 } from "@mui/material";
 import "./ProductDetails.css";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 import { productContext } from "../../../Context/ProductContextProvider";
 import { useParams } from "react-router";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
@@ -25,7 +27,6 @@ const ProductDetails = () => {
     useContext(productContext);
 
   const { id } = useParams();
-  console.log(id);
 
   useEffect(() => {
     readOneProduct(id);
@@ -109,9 +110,6 @@ const ProductDetails = () => {
                     onClick={() => deleteProduct(id)}>
                     Delete
                   </Button>
-                  {/* <Link
-                    to={`/edit/${productDetails.id}`}
-                    style={{ width: "50%" }}> */}
                   <Link
                     to={`/edit/${productDetails.id}`}
                     style={{ width: "50%" }}>
@@ -122,7 +120,6 @@ const ProductDetails = () => {
                       Edit
                     </Button>
                   </Link>
-                  {/* </Link> */}
                 </Box>
               </Paper>
             </Grid>
