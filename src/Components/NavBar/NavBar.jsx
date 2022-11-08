@@ -163,9 +163,10 @@ function Navbar() {
               justifyContent: "space-around",
             }}>
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/list">Product List</NavLink>
             <NavLink to="/add">Add Product</NavLink>
+            <NavLink to="/list">Product List</NavLink>
             <NavLink to="/details">Details</NavLink>
+            <NavLink to="/edit">Edit</NavLink>
           </Box>
           <LiveSearch />
           {/* <Search sx={{ mr: "35px", color: "black" }}>

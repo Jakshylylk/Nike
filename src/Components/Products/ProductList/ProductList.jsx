@@ -6,7 +6,6 @@ import "./ProductList.css";
 
 const ProductList = () => {
   const { readProduct, productsArr } = useContext(productContext);
-  console.log(productsArr);
 
   useEffect(() => {
     readProduct();

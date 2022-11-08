@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { createContext, useReducer } from "react";
+import { useNavigate } from "react-router";
 
 export const productContext = createContext();
 
@@ -7,12 +8,15 @@ const API = "http://localhost:8000/products";
 
 const INIT_STATE = {
   products: null,
+  productDetails: null,
 };
 
 function reducer(prevState, action) {
   switch (action.type) {
     case "GET_PRODUCT":
       return { ...prevState, product: action.payload.data };
+    case "GET_ONE_PRODUCT":
+      return { ...prevState, productDetails: action.payload };
     default:
       return prevState;
   }
@@ -21,6 +25,8 @@ function reducer(prevState, action) {
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
   // console.log(state);
+
+  const navigate = useNavigate();
 
   // ! =================== CREATE START =================
   async function addProduct(newProduct) {
@@ -46,12 +52,50 @@ const ProductContextProvider = ({ children }) => {
 
   // ? =================== READ END ======================
 
+  // todo ************************************************************************
+
+  // ! ================== DETAILS START ===================
+  async function readOneProduct(id) {
+    const { data } = await axios(`${API}/${id}`);
+    dispatch({
+      type: "GET_ONE_PRODUCT",
+      payload: data,
+    });
+  }
+  // ? ================== DETAILS END = ===================
+
+  // ! ================== DELETE START ====================
+  async function deleteProduct(id) {
+    try {
+      await axios.delete(`${API}/${id}`);
+      readProduct();
+      navigate("/list");
+    } catch (error) {
+      return error;
+    }
+  }
+  // ? ================== DELETE END ======================
+
+  // ! ================== EDIT START ======================
+
+  async function editProducts(id, editProduct) {
+    await axios.patch(`${API}/${id}`, editProduct);
+    readProduct();
+  }
+
+  // ? ================== EDIT END ========================
+
   let productCloud = {
     addProduct,
     readProduct,
+    readOneProduct,
+    deleteProduct,
+    editProducts,
+
     productsArr: state.product,
+    productDetails: state.productDetails,
   };
-  console.log(state);
+
   return (
     <productContext.Provider value={productCloud}>
       {children}

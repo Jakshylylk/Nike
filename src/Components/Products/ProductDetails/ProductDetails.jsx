@@ -1,57 +1,135 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Thumbs } from "swiper";
-import { Container, Grid, Paper } from "@mui/material";
+import {
+  Alert,
+  Button,
+  Container,
+  Grid,
+  Paper,
+  Typography,
+  Box,
+} from "@mui/material";
 import "./ProductDetails.css";
+import { productContext } from "../../../Context/ProductContextProvider";
+import { useParams } from "react-router";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import { Link } from "react-router-dom";
 
 SwiperCore.use([Thumbs]);
 
 const ProductDetails = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  const { readOneProduct, productDetails, deleteProduct } =
+    useContext(productContext);
+
+  const { id } = useParams();
+  console.log(id);
+
+  useEffect(() => {
+    readOneProduct(id);
+  }, [id]);
+
   return (
-    <Container sx={{ marginTop: "50px" }}>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <Swiper
-            className="mySwiper2"
-            spaceBetween={10}
-            thumbs={{ swiper: thumbsSwiper }}>
-            <SwiperSlide>
-              <img src="https://www.fjordtravel.no/wp-content/uploads/2013/09/Cruise-on-Sognefjord-by-Robin-Strand-Visit-Bergen.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://www.fjordtravel.no/wp-content/uploads/2013/09/Cruise-on-Sognefjord-by-Robin-Strand-Visit-Bergen.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://www.fjordtravel.no/wp-content/uploads/2013/09/Cruise-on-Sognefjord-by-Robin-Strand-Visit-Bergen.jpg" />
-            </SwiperSlide>
-          </Swiper>
-          <Swiper
-            onSwiper={setThumbsSwiper}
-            spaceBetween={5}
-            slidesPerView={2}
-            freeMode={true}
-            watchSlidesProgress={true}
-            className="mySwiper">
-            <SwiperSlide>
-              <Paper elevation={3}>
-                <img src="https://www.fjordtravel.no/wp-content/uploads/2013/09/Cruise-on-Sognefjord-by-Robin-Strand-Visit-Bergen.jpg" />
+    <>
+      {productDetails ? (
+        <Container sx={{ marginTop: "50px" }}>
+          <Grid container spacing={2}>
+            <Grid item xs={6}>
+              <Swiper
+                className="mySwiper2"
+                spaceBetween={10}
+                thumbs={{ swiper: thumbsSwiper }}>
+                <SwiperSlide>
+                  <img src={productDetails.img1} alt={productDetails.title} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={productDetails.img2} alt={productDetails.title} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={productDetails.img3} alt={productDetails.title} />
+                </SwiperSlide>
+              </Swiper>
+              <Swiper
+                onSwiper={setThumbsSwiper}
+                spaceBetween={10}
+                slidesPerView={4}
+                freeMode={true}
+                watchSlidesProgress={true}
+                className="mySwiper">
+                <SwiperSlide>
+                  <Paper elevation={3}>
+                    <img src={productDetails.img1} alt={productDetails.title} />
+                  </Paper>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Paper elevation={3}>
+                    <img src={productDetails.img2} alt={productDetails.title} />
+                  </Paper>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Paper elevation={3}>
+                    <img src={productDetails.img3} alt={productDetails.title} />
+                  </Paper>
+                </SwiperSlide>
+              </Swiper>
+            </Grid>
+            <Grid item xs={6}>
+              <Paper elevation={3} sx={{ padding: "10px", marginTop: "50px" }}>
+                <Typography variant="h5">{productDetails.category} </Typography>
+                <hr />
+                <Typography sx={{ marginTop: "30px" }}>
+                  {productDetails.description}{" "}
+                </Typography>
+                <Alert
+                  icon={<AttachMoneyIcon />}
+                  sx={{
+                    fontSize: "20px",
+                    fontWeight: 700,
+                    mt: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                  }}>
+                  Цена: {productDetails.price} сом
+                  <Button variant="contained" sx={{ ml: "100px" }}>
+                    Купить
+                  </Button>
+                </Alert>
+                <Box
+                  sx={{
+                    mt: "15px",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}>
+                  <Button
+                    variant="contained"
+                    color="error"
+                    sx={{ width: "48%" }}
+                    onClick={() => deleteProduct(id)}>
+                    Delete
+                  </Button>
+                  {/* <Link
+                    to={`/edit/${productDetails.id}`}
+                    style={{ width: "50%" }}> */}
+                  <Link
+                    to={`/edit/${productDetails.id}`}
+                    style={{ width: "50%" }}>
+                    <Button
+                      variant="contained"
+                      color="warning"
+                      sx={{ width: "48%" }}>
+                      Edit
+                    </Button>
+                  </Link>
+                  {/* </Link> */}
+                </Box>
               </Paper>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Paper elevation={3}>
-                <img src="https://www.fjordtravel.no/wp-content/uploads/2013/09/Cruise-on-Sognefjord-by-Robin-Strand-Visit-Bergen.jpg" />
-              </Paper>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Paper elevation={3}>
-                <img src="https://www.fjordtravel.no/wp-content/uploads/2013/09/Cruise-on-Sognefjord-by-Robin-Strand-Visit-Bergen.jpg" />
-              </Paper>
-            </SwiperSlide>
-          </Swiper>
-        </Grid>
-      </Grid>
-    </Container>
+            </Grid>
+          </Grid>
+        </Container>
+      ) : null}
+    </>
   );
 };
 
