@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Authorization from "./Components/Auth/Authorization";
 import Footer from "./Components/Footer/Footer";
 import SimpleMap from "./Components/Map/Map";
@@ -11,9 +11,9 @@ const App = () => {
     <ProductContextProvider>
       <Navbar />
       <MainRoutes />
-      {/* <Footer /> */}
       {/* <Authorization /> */}
       <SimpleMap />
+      <Footer />
     </ProductContextProvider>
   );
 };

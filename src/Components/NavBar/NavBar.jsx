@@ -91,13 +91,13 @@ function Navbar() {
             component="a"
             href="/"
             sx={{
-              mr: 2,
+              mr: 1,
               display: { md: "flex" },
-              width: 120,
-              height: 80,
+              width: 140,
+              height: 65,
             }}>
             {
-              <img src="https://e7.pngegg.com/pngimages/77/403/png-clipart-swoosh-nike-just-do-it-logo-nike-angle-adidas.png" />
+              <img src="https://www.freeiconspng.com/thumbs/nike-logo/black-nike-logo-no-background-20.jpg" />
             }
           </Typography>
 
