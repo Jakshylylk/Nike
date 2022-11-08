@@ -7,19 +7,16 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import SearchIcon from "@mui/icons-material/Search";
 import { alpha, styled } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import { color } from "@mui/system";
+import LiveSearch from "../LiveSearch/LiveSearch";
 
 const pages = ["Products", "Men", "Women"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -158,6 +155,7 @@ function Navbar() {
             }}>
             LOGO
           </Typography>
+
           <Box
             sx={{
               width: "60%",
@@ -170,15 +168,17 @@ function Navbar() {
             <NavLink to="/details">Details</NavLink>
             <NavLink to="/edit">Edit</NavLink>
           </Box>
-          <Search sx={{ mr: "35px", color: "black" }}>
+          <LiveSearch />
+          {/* <Search sx={{ mr: "35px", color: "black" }}>
             <SearchIconWrapper>
               <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
+              {/* <LiveSearch /> */}
+          {/* </SearchIconWrapper> */}
+          {/* <StyledInputBase */}
+          {/* placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
+            /> */}
+          {/* </Search> */}
           <Box sx={{ flexGrow: 0 }}>
             <IconButton sx={{ color: "black" }}>
               <FavoriteBorderIcon />
