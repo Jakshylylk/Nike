@@ -169,16 +169,6 @@ function Navbar() {
             <NavLink to="/edit">Edit</NavLink>
           </Box>
           <LiveSearch />
-          {/* <Search sx={{ mr: "35px", color: "black" }}>
-            <SearchIconWrapper>
-              <SearchIcon />
-              {/* <LiveSearch /> */}
-          {/* </SearchIconWrapper> */}
-          {/* <StyledInputBase */}
-          {/* placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            /> */}
-          {/* </Search> */}
           <Box sx={{ flexGrow: 0 }}>
             <IconButton sx={{ color: "black" }}>
               <FavoriteBorderIcon />
