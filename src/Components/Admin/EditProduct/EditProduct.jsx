@@ -46,68 +46,68 @@ const EditProduct = () => {
   }
   return (
     <>
-      <div className="editProduct-container">
-        <form onSubmit={e => saveEditProduct(e)}>
-          <input
-            value={inpValue.category}
-            type="text"
-            placeholder="Категория"
-            name="category"
-            onChange={e => handleChange(e)}
-          />
-          <input
-            value={inpValue.description}
-            type="text"
-            placeholder="Описания"
-            name="description"
-            onChange={e => handleChange(e)}
-          />
-          <input
-            value={inpValue.color}
-            type="text"
-            placeholder="Цвет"
-            name="color"
-            onChange={e => handleChange(e)}
-          />
-          <input
-            value={inpValue.price}
-            type="number"
-            placeholder="Цена"
-            name="price"
-            onChange={e => handleChange(e)}
-          />
-          <input
-            value={inpValue.img1}
-            type="text"
-            placeholder="Добавить 1 картинку"
-            name="img1"
-            onChange={e => handleChange(e)}
-          />
-          <input
-            value={inpValue.img2}
-            type="text"
-            placeholder="Добавить 2 картинку"
-            name="img2"
-            onChange={e => handleChange(e)}
-          />
-          <input
-            value={inpValue.img3}
-            type="text"
-            placeholder="Добавить 3 картинку"
-            name="img3"
-            onChange={e => handleChange(e)}
-          />
-          <input
-            value={inpValue.img4}
-            type="text"
-            placeholder="Добавить 4 картинку"
-            name="img4"
-            onChange={e => handleChange(e)}
-          />
-          <Button variant="contained" type="submit">
-            Сохранить
-          </Button>
-        </form>
+      <div className="edit-body">
+        <div className="editProduct-container">
+          <form onSubmit={e => saveEditProduct(e)}>
+            <input
+              value={inpValue.category}
+              type="text"
+              placeholder="Категория"
+              name="category"
+              onChange={e => handleChange(e)}
+            />
+            <input
+              value={inpValue.description}
+              type="text"
+              placeholder="Описания"
+              name="description"
+              onChange={e => handleChange(e)}
+            />
+            <input
+              value={inpValue.color}
+              type="text"
+              placeholder="Цвет"
+              name="color"
+              onChange={e => handleChange(e)}
+            />
+            <input
+              value={inpValue.price}
+              type="number"
+              placeholder="Цена"
+              name="price"
+              onChange={e => handleChange(e)}
+            />
+            <input
+              value={inpValue.img1}
+              type="text"
+              placeholder="Добавить 1 картинку"
+              name="img1"
+              onChange={e => handleChange(e)}
+            />
+            <input
+              value={inpValue.img2}
+              type="text"
+              placeholder="Добавить 2 картинку"
+              name="img2"
+              onChange={e => handleChange(e)}
+            />
+            <input
+              value={inpValue.img3}
+              type="text"
+              placeholder="Добавить 3 картинку"
+              name="img3"
+              onChange={e => handleChange(e)}
+            />
+            <input
+              value={inpValue.img4}
+              type="text"
+              placeholder="Добавить 4 картинку"
+              name="img4"
+              onChange={e => handleChange(e)}
+            />
+            <button type="submit">Сохранить</button>
+          </form>
+        </div>
       </div>
     </>
   );

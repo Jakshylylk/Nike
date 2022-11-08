@@ -9,12 +9,18 @@ const API = "http://localhost:8000/products";
 const INIT_STATE = {
   products: null,
   productDetails: null,
+  pageTotalCount: 1,
 };
 
 function reducer(prevState, action) {
   switch (action.type) {
     case "GET_PRODUCT":
-      return { ...prevState, product: action.payload.data };
+      return {
+        ...prevState,
+        product: action.payload.data,
+        pageTotalCount: Math.ceil(action.payload.headers["x-total-count"] / 6),
+      };
+
     case "GET_ONE_PRODUCT":
       return { ...prevState, productDetails: action.payload };
     default:
@@ -94,6 +100,7 @@ const ProductContextProvider = ({ children }) => {
 
     productsArr: state.product,
     productDetails: state.productDetails,
+    pageCount: state.pageTotalCount,
   };
 
   return (
