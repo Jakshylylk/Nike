@@ -16,6 +16,8 @@ import "swiper/swiper.min.css";
 import { productContext } from "../../../Context/ProductContextProvider";
 import { useParams } from "react-router";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 import { Link } from "react-router-dom";
 
 SwiperCore.use([Thumbs]);
