@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "category": "Sneakers",
+      "category": "man",
       "description": "So you're in love with the classic look of the '90s, but you've got a thing for today's fast-paced culture. Meet the Air Max TW.",
       "color": "Black",
       "price": 13000,
@@ -10,17 +10,6 @@
       "img3": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f2c0b0b1-9c95-4488-a86b-9324cee86472/air-max-tw-shoes-DhpWvV.png",
       "img4": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c049d236-290c-4003-ad2c-5507a931bc4c/air-max-tw-shoes-DhpWvV.png",
       "id": 1
-    },
-    {
-      "category": "Sneakers",
-      "description": "So you're in love with the classic look of the '90s, but you've got a thing for today's fast-paced culture. Meet the Air Max TW.",
-      "color": "Black",
-      "price": "10000",
-      "img1": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1db44a18-c0bf-4bf8-8181-c7e179c8f31d/air-max-tw-shoes-DhpWvV.png",
-      "img2": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1c650630-634e-4a73-bd58-a590042ea868/air-max-tw-shoes-DhpWvV.png",
-      "img3": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f2c0b0b1-9c95-4488-a86b-9324cee86472/air-max-tw-shoes-DhpWvV.png",
-      "img4": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c049d236-290c-4003-ad2c-5507a931bc4c/air-max-tw-shoes-DhpWvV.png",
-      "id": 3
     },
     {
       "category": "Sneakers",
@@ -45,15 +34,16 @@
       "id": 5
     },
     {
-      "category": "AIRMAX",
-      "description": "Celebrating 40 years of pushing sport and fashion boundaries, this commemorative AF-1 mixes elements from beloved launches to highlight the timeless design's place in sneaker history. Gold accents, a debossed *40* on the heel and an honorary tongue label are just a few of the embellishments inviting you to the party. Completing the look, crisp leather in bold colours delivers a grand finale. Happy anniversary!",
-      "color": "white",
-      "price": 10000,
-      "img1": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/8d7e5e70-1cff-447b-bc0c-ac05eb81df68/air-force-1-07-lv8-shoes-rbKxJh.png",
-      "img2": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ed4fb193-247d-4e4e-aaf7-12ff56bdffd8/air-force-1-07-lv8-shoes-rbKxJh.png",
-      "img3": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da484d48-70d6-4572-b95e-cccfbaf56b30/air-force-1-07-lv8-shoes-rbKxJh.png",
-      "img4": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/52d5c778-0303-4b14-906f-82faf7f63dd2/air-force-1-07-lv8-shoes-rbKxJh.png",
-      "id": 7
+      "category": "Sneakers",
+      "description": "So you're in love with the classic look of the '90s, but you've got a thing for today's fast-paced culture. Meet the Air Max TW.",
+      "color": "Black",
+      "price": 13000,
+      "img1": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1db44a18-c0bf-4bf8-8181-c7e179c8f31d/air-max-tw-shoes-DhpWvV.png",
+      "img2": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1c650630-634e-4a73-bd58-a590042ea868/air-max-tw-shoes-DhpWvV.png",
+      "img3": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f2c0b0b1-9c95-4488-a86b-9324cee86472/air-max-tw-shoes-DhpWvV.png",
+      "img4": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c049d236-290c-4003-ad2c-5507a931bc4c/air-max-tw-shoes-DhpWvV.png",
+      "id": 6
+    },
     }
   ]
 }

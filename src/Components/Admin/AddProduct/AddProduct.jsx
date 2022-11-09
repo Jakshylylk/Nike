@@ -7,13 +7,13 @@ const AddProduct = () => {
 
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
+  const [select, setSelect] = useState("");
   const [color, setColor] = useState("");
   const [price, setPrice] = useState(0);
   const [img1, setImg1] = useState("");
   const [img2, setImg2] = useState("");
   const [img3, setImg3] = useState("");
   const [img4, setImg4] = useState("");
-  const [selects, setSelects] = useState();
 
   function handleAdd(e) {
     // todo останавливает автообнавление браузера при отправке данных через form
@@ -60,10 +60,6 @@ const AddProduct = () => {
       <div className="body">
         <div className="addProduct-container">
           <form onSubmit={e => handleAdd(e)}>
-            <select value={selects} onChange={e => setSelects(e.target.value)}>
-              <option>Man</option>
-              <option>Woman</option>
-            </select>
             <input
               value={category}
               onChange={e => setCategory(e.target.value)}

@@ -1,9 +1,13 @@
 .main-map {
   display: flex;
   justify-content: center;
+  /* margin-bottom: 250px; */
+  margin: 0;
+  background-image: url("https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iNv8NMTH4cSc/v0/1200x-1.png");
 }
 
 .map {
   width: 50%;
-  height: 30vh;
+  height: 50vh;
+  padding: 50px;
 }

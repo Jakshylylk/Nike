@@ -17,11 +17,12 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LiveSearch from "../LiveSearch/LiveSearch";
+import { useLocation } from "react-router-dom";
 
-const pages = ["Products", "Men", "Women"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
+  const location = useLocation();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -115,7 +116,7 @@ function Navbar() {
               color="inherit">
               <MenuIcon />
             </IconButton>
-            <Menu
+            {/* <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -135,7 +136,7 @@ function Navbar() {
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
-            </Menu>
+            </Menu> */}
           </Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
@@ -164,21 +165,18 @@ function Navbar() {
             }}>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/add">Add Product</NavLink>
-            <NavLink to="/list">Product List</NavLink>
+            {location.pathname === "/list" ? (
+              <span style={{ cursor: "pointer", color: "black" }}>
+                Products List
+              </span>
+            ) : (
+              <NavLink to="/list">Products List</NavLink>
+            )}
+            {/* <NavLink to="/list">Product List</NavLink> */}
             <NavLink to="/details">Details</NavLink>
             <NavLink to="/edit">Edit</NavLink>
           </Box>
           <LiveSearch />
-          {/* <Search sx={{ mr: "35px", color: "black" }}>
-            <SearchIconWrapper>
-              <SearchIcon />
-              {/* <LiveSearch /> */}
-          {/* </SearchIconWrapper> */}
-          {/* <StyledInputBase */}
-          {/* placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            /> */}
-          {/* </Search> */}
           <Box sx={{ flexGrow: 0 }}>
             <IconButton sx={{ color: "black" }}>
               <FavoriteBorderIcon />
