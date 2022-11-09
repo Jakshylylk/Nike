@@ -11,7 +11,7 @@ import Container from "@mui/material/Container";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { alpha, styled } from "@mui/material";
+import { alpha, Button, styled } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import { Link, NavLink } from "react-router-dom";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -19,8 +19,10 @@ import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LiveSearch from "../LiveSearch/LiveSearch";
 import { useLocation } from "react-router-dom";
+
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { basketContext } from "../../Context/BasketContextProvider";
+
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -96,13 +98,13 @@ function Navbar() {
             component="a"
             href="/"
             sx={{
-              mr: 2,
+              mr: 1,
               display: { md: "flex" },
-              width: 120,
-              height: 80,
+              width: 140,
+              height: 65,
             }}>
             {
-              <img src="https://e7.pngegg.com/pngimages/77/403/png-clipart-swoosh-nike-just-do-it-logo-nike-angle-adidas.png" />
+              <img src="https://www.freeiconspng.com/thumbs/nike-logo/black-nike-logo-no-background-20.jpg" />
             }
           </Typography>
 
@@ -168,7 +170,9 @@ function Navbar() {
               <FavoriteBorderIcon />
             </IconButton>
             <IconButton sx={{ color: "black" }}>
-              <WorkOutlineIcon />
+              <Button onClick={<Sidebar />}>
+                <WorkOutlineIcon />
+              </Button>
             </IconButton>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ color: "black" }}>

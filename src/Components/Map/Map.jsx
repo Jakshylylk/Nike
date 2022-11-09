@@ -14,7 +14,6 @@ export default function SimpleMap() {
   };
 
   return (
-    // Important! Always set the container height explicitly
     <div className="main-map">
       <div className="map">
         <GoogleMapReact

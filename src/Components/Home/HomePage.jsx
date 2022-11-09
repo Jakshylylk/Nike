@@ -39,7 +39,14 @@ const HomePage = () => {
         src={VideoNike}
         autoPlay={true}
         width="100%"
-        controls={true}></video>
+        controls={true}
+        muted></video>
+      <p>
+        Future Icons
+        <h1> Air Max TW</h1>
+        <br />
+        Uncover the future with Tiakola and Camavinga
+      </p>
     </>
   );
 };

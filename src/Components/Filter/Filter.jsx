@@ -7,7 +7,6 @@ import {
   Slider,
 } from "@mui/material";
 import React from "react";
-
 const Filter = ({ category, setCategory, price, setPrice }) => {
   return (
     <FormControl>

@@ -9,7 +9,18 @@
       "img2": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1c650630-634e-4a73-bd58-a590042ea868/air-max-tw-shoes-DhpWvV.png",
       "img3": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f2c0b0b1-9c95-4488-a86b-9324cee86472/air-max-tw-shoes-DhpWvV.png",
       "img4": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c049d236-290c-4003-ad2c-5507a931bc4c/air-max-tw-shoes-DhpWvV.png",
-      "id": 1
+      "id": 2
+    },
+    {
+      "category": "Sneakers",
+      "description": "So you're in love with the classic look of the '90s, but you've got a thing for today's fast-paced culture. Meet the Air Max TW.",
+      "color": "Black",
+      "price": 13000,
+      "img1": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1db44a18-c0bf-4bf8-8181-c7e179c8f31d/air-max-tw-shoes-DhpWvV.png",
+      "img2": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1c650630-634e-4a73-bd58-a590042ea868/air-max-tw-shoes-DhpWvV.png",
+      "img3": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f2c0b0b1-9c95-4488-a86b-9324cee86472/air-max-tw-shoes-DhpWvV.png",
+      "img4": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c049d236-290c-4003-ad2c-5507a931bc4c/air-max-tw-shoes-DhpWvV.png",
+      "id": 3
     },
     {
       "category": "man",
@@ -176,38 +187,6 @@
       "img4": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/fa97eff9-181c-4757-854b-ee22b252095a/jordan-delta-2-clot-shoes-gVRsjW.png",
       "id": 16
     },
-    {
-      "category": "woman",
-      "description": "Lace up and feel the legacy. Produced at the cross section of art, music and culture, this champion running shoe helped define the '90s. Worn by presidents, revolutionised through collabs and celebrated through rare colourways, its striking visuals, Waffle outsole and exposed Air cushioning keep it alive and well.",
-      "color": "white",
-      "price": 11000,
-      "img1": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/37ad2753-be75-4384-bdf2-31961cafb484/air-max-90-shoes-DJ27BX.png",
-      "img2": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2788d7ee-010d-4f75-a70f-5a20a24bd8bd/air-max-90-shoes-DJ27BX.png",
-      "img3": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/14739c42-2f63-4959-99b2-6a70f7a32644/air-max-90-shoes-DJ27BX.png",
-      "img4": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2788d7ee-010d-4f75-a70f-5a20a24bd8bd/air-max-90-shoes-DJ27BX.png",
-      "id": 17
-    },
-    {
-      "category": "woman",
-      "description": "The radiance lives on in the Nike Air Force 1 '07 Next Nature—the basketball original that lets you do good by looking good. Made from at least 20% recycled materials by weight, it keeps everything you love best: tried and true AF-1 style and comfortable cushioning.",
-      "color": "white",
-      "price": 15000,
-      "img1": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/565396c2-8e56-469a-913b-226315f5bb00/air-force-1-07-next-nature-shoes-Kwpn0q.png",
-      "img2": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/24b3524d-9007-4f14-b7ce-914e632f41de/air-force-1-07-next-nature-shoes-Kwpn0q.png",
-      "img3": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/432ec0ae-0fab-4fb8-b173-8e7257302cfd/air-force-1-07-next-nature-shoes-Kwpn0q.png",
-      "img4": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c5cb772a-ef61-49a7-a54b-3ce913feb5c4/air-force-1-07-next-nature-shoes-Kwpn0q.png",
-      "id": 18
-    },
-    {
-      "category": "man",
-      "description": "Celebrating 40 years of pushing sport and fashion boundaries, this commemorative AF-1 mixes elements from beloved launches to highlight the timeless design's place in sneaker history. Gold accents, a debossed *40* on the heel and an honorary tongue label are just a few of the embellishments inviting you to the party. Completing the look, crisp leather in bold colours delivers a grand finale. Happy anniversary!",
-      "color": "Green",
-      "price": 12000,
-      "img1": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da484d48-70d6-4572-b95e-cccfbaf56b30/air-force-1-07-lv8-shoes-rbKxJh.png",
-      "img2": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/52d5c778-0303-4b14-906f-82faf7f63dd2/air-force-1-07-lv8-shoes-rbKxJh.png",
-      "img3": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e21e4aa0-aca6-4a18-a604-2f19e09c864c/air-force-1-07-lv8-shoes-rbKxJh.png",
-      "img4": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5febc38f-fb6e-4074-83d4-d139cd886307/air-force-1-07-lv8-shoes-rbKxJh.png",
-      "id": 19
     }
   ]
 }
