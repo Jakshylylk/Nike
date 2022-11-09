@@ -22,24 +22,32 @@ import { useLocation } from "react-router-dom";
 
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { basketContext } from "../../Context/BasketContextProvider";
-
+import Sidebar from "../Drawer/Drawer";
+import { authContext } from "../../Context/AuthContextProvider";
+import { AccountCircle } from "@mui/icons-material";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
   const location = useLocation();
+  const [anchorEl, setAnchorEl] = React.useState(null);
   const { basketCount } = React.useContext(basketContext);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = event => {
-    setAnchorElNav(event.currentTarget);
+  const { user, handleLogOut } = React.useContext(authContext);
+  const handleProfileMenuOpen = event => {
+    setAnchorEl(event.currentTarget);
   };
+  const menuId = "primary-search-account-menu";
+
   const handleOpenUserMenu = event => {
     setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+  const handleOpenNavMenu = () => {
     setAnchorElNav(null);
   };
 
@@ -148,14 +156,14 @@ function Navbar() {
               display: "flex",
               justifyContent: "space-around",
             }}>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/add">Add Product</NavLink>
+            <NavLink to="/">HOME</NavLink>
+            <NavLink to="/add">ADD PRODUCT</NavLink>
             {location.pathname === "/list" ? (
               <span style={{ cursor: "pointer", color: "black" }}>
                 Products List
               </span>
             ) : (
-              <NavLink to="/list">Products List</NavLink>
+              <NavLink to="/list">PRODUCTS LIST</NavLink>
             )}
           </Box>
           <LiveSearch />
@@ -201,6 +209,31 @@ function Navbar() {
                 </MenuItem>
               ))}
             </Menu>
+
+            <Link to="/">
+              {user.email ? user.email : <span>Не зашел</span>}
+            </Link>
+            <Button onClick={handleLogOut} sx={{ color: "black" }}>
+              LogOut
+            </Button>
+
+            <IconButton
+              size="large"
+              aria-label="show 17 new notifications"
+              color="inherit"></IconButton>
+
+            <IconButton
+              size="large"
+              edge="end"
+              aria-label="account of current user"
+              aria-controls={menuId}
+              aria-haspopup="true"
+              onClick={handleProfileMenuOpen}
+              color="inherit">
+              <Link to="/auth">
+                <AccountCircle />
+              </Link>
+            </IconButton>
           </Box>
         </Toolbar>
       </Container>
