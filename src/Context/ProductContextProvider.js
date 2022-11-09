@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { createContext, useReducer } from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 
 export const productContext = createContext();
 
@@ -27,6 +27,7 @@ const ProductContextProvider = ({ children }) => {
   // console.log(state);
 
   const navigate = useNavigate();
+  const location = useLocation;
 
   // ! =================== CREATE START =================
   async function addProduct(newProduct) {
@@ -43,7 +44,7 @@ const ProductContextProvider = ({ children }) => {
 
   // ! =================== READ START ====================
   async function readProduct() {
-    const res = await axios(API);
+    const res = await axios(`${API}${location.search}`);
     dispatch({
       type: "GET_PRODUCT",
       payload: res,
