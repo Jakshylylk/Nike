@@ -9,14 +9,14 @@ import MainRoutes from "./MainRoutes";
 
 const App = () => {
   return (
-
     <BasketContextProvider>
       <ProductContextProvider>
         <Navbar />
         <MainRoutes />
-        {/* <Footer /> */}
+
         {/* <Authorization /> */}
         <SimpleMap />
+        <Footer />
       </ProductContextProvider>
     </BasketContextProvider>
   );

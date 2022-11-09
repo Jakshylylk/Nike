@@ -4,27 +4,20 @@
   height: 100vh;
   background-repeat: no-repeat;
 }
-.editProduct-container {
-  width: 30%;
-  margin: 0px auto;
-  border-radius: 20px;
-  padding-top: 150px;
-}
-.editProduct-container input {
-  width: 90%;
+#form-add {
+  width: 35%;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  margin: 10px;
-  border: none;
-  background: rgba(255, 255, 255, 0.8);
+  margin: 0px auto;
 }
-.editProduct-container input:focus {
-  background: white;
+
+.outlined-basic {
+  height: 65px;
 }
-.editProduct-container button {
-  padding: 10px;
-  width: 20%;
-  margin: 10px auto;
-  margin-left: 170px;
+
+#add-title {
+  margin: 20px auto;
+  width: 35%;
+  font-size: 40px;
+  text-align: center;
 }

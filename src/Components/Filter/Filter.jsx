@@ -28,7 +28,7 @@ const Filter = ({ category, setCategory, price, setPrice }) => {
         onChange={e => setPrice(e.target.value)}
         valueLabelDisplay="auto"
         min={0}
-        max={200000}
+        max={100000}
       />
     </FormControl>
   );

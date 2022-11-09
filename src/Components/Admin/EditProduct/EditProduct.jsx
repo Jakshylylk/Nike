@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { productContext } from "../../../Context/ProductContextProvider";
@@ -47,67 +47,92 @@ const EditProduct = () => {
   return (
     <>
       <div className="edit-body">
-        <div className="editProduct-container">
-          <form onSubmit={e => saveEditProduct(e)}>
-            <input
-              value={inpValue.category}
-              type="text"
-              placeholder="Категория"
-              name="category"
-              onChange={e => handleChange(e)}
-            />
-            <input
-              value={inpValue.description}
-              type="text"
-              placeholder="Описания"
-              name="description"
-              onChange={e => handleChange(e)}
-            />
-            <input
-              value={inpValue.color}
-              type="text"
-              placeholder="Цвет"
-              name="color"
-              onChange={e => handleChange(e)}
-            />
-            <input
-              value={inpValue.price}
-              type="number"
-              placeholder="Цена"
-              name="price"
-              onChange={e => handleChange(e)}
-            />
-            <input
-              value={inpValue.img1}
-              type="text"
-              placeholder="Добавить 1 картинку"
-              name="img1"
-              onChange={e => handleChange(e)}
-            />
-            <input
-              value={inpValue.img2}
-              type="text"
-              placeholder="Добавить 2 картинку"
-              name="img2"
-              onChange={e => handleChange(e)}
-            />
-            <input
-              value={inpValue.img3}
-              type="text"
-              placeholder="Добавить 3 картинку"
-              name="img3"
-              onChange={e => handleChange(e)}
-            />
-            <input
-              value={inpValue.img4}
-              type="text"
-              placeholder="Добавить 4 картинку"
-              name="img4"
-              onChange={e => handleChange(e)}
-            />
-            <button type="submit">Сохранить</button>
-          </form>
-        </div>
+        <form id="form-add" onSubmit={e => saveEditProduct(e)}>
+          <TextField
+            className="outlined-basic"
+            label="Категория"
+            variant="outlined"
+            name="category"
+            value={inpValue.category}
+            onChange={e => handleChange(e)}
+          />
+          <TextField
+            className="outlined-basic"
+            label="Название"
+            variant="outlined"
+            name="title"
+            value={inpValue.title}
+            onChange={e => handleChange(e)}
+          />
+          <TextField
+            className="outlined-basic"
+            label="Модель"
+            variant="outlined"
+            name="model"
+            value={inpValue.model}
+            onChange={e => handleChange(e)}
+          />
+          <TextField
+            className="outlined-basic"
+            label="Описание"
+            variant="outlined"
+            name="description"
+            value={inpValue.description}
+            onChange={e => handleChange(e)}
+          />
+          <TextField
+            className="outlined-basic"
+            label="Цвет"
+            variant="outlined"
+            name="color"
+            value={inpValue.color}
+            onChange={e => handleChange(e)}
+          />
+          <TextField
+            className="outlined-basic"
+            type="number"
+            label="Цена"
+            variant="outlined"
+            name="price"
+            value={inpValue.price}
+            onChange={e => handleChange(e)}
+          />
+          <TextField
+            className="outlined-basic"
+            label="Фото 1"
+            variant="outlined"
+            name="img1"
+            value={inpValue.img1}
+            onChange={e => handleChange(e)}
+          />
+          <TextField
+            className="outlined-basic"
+            label="Фото 2"
+            variant="outlined"
+            name="img2"
+            value={inpValue.img2}
+            onChange={e => handleChange(e)}
+          />
+          <TextField
+            className="outlined-basic"
+            label="Фото 3"
+            variant="outlined"
+            name="img3"
+            value={inpValue.img3}
+            onChange={e => handleChange(e)}
+          />
+          <TextField
+            className="outlined-basic"
+            label="Фото 3"
+            variant="outlined"
+            name="img3"
+            value={inpValue.img4}
+            onChange={e => handleChange(e)}
+          />
+          <Button variant="contained" type="submit">
+            Сохранить
+          </Button>
+        </form>
       </div>
     </>
   );
