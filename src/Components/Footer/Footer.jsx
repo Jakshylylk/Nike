@@ -3,6 +3,7 @@ import { Box, Container, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import InstagramIcon from "@mui/icons-material/Instagram";
+
 const Footer = () => {
   return (
     <>

@@ -7,7 +7,6 @@ import {
   Slider,
 } from "@mui/material";
 import React from "react";
-
 const Filter = ({ category, setCategory, price, setPrice }) => {
   return (
     <FormControl>
@@ -28,7 +27,7 @@ const Filter = ({ category, setCategory, price, setPrice }) => {
         onChange={e => setPrice(e.target.value)}
         valueLabelDisplay="auto"
         min={0}
-        max={500}
+        max={200000}
       />
     </FormControl>
   );

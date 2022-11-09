@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { alpha, styled } from "@mui/material";
+import { alpha, Button, styled } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import { NavLink } from "react-router-dom";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -18,6 +18,7 @@ import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LiveSearch from "../LiveSearch/LiveSearch";
 import { useLocation } from "react-router-dom";
+import Sidebar from "../Drawer/Drawer";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -173,6 +174,7 @@ function Navbar() {
               <NavLink to="/list">Products List</NavLink>
             )}
             {/* <NavLink to="/list">Product List</NavLink> */}
+
             <NavLink to="/details">Details</NavLink>
             <NavLink to="/edit">Edit</NavLink>
           </Box>
@@ -182,7 +184,9 @@ function Navbar() {
               <FavoriteBorderIcon />
             </IconButton>
             <IconButton sx={{ color: "black" }}>
-              <WorkOutlineIcon />
+              <Button onClick={<Sidebar />}>
+                <WorkOutlineIcon />
+              </Button>
             </IconButton>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ color: "black" }}>

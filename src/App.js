@@ -11,7 +11,7 @@ const App = () => {
     <ProductContextProvider>
       <Navbar />
       <MainRoutes />
-      {/* <Authorization /> */}
+      <Authorization />
       <SimpleMap />
       <Footer />
     </ProductContextProvider>
