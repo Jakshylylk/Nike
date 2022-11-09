@@ -2,6 +2,7 @@
   "products": [
     {
       "category": "man",
+
       "description": "So you're in love with the classic look of the '90s, but you've got a thing for today's fast-paced culture. Meet the Air Max TW.",
       "color": "Black",
       "price": "11000",
@@ -13,6 +14,7 @@
     },
     {
       "category": "man",
+
       "description": "Celebrating 40 years of pushing sport and fashion boundaries, this commemorative AF-1 mixes elements from beloved launches to highlight the timeless design's place in sneaker history. Gold accents, a debossed *40* on the heel and an honorary tongue label are just a few of the embellishments inviting you to the party. Completing the look, crisp leather in bold colours delivers a grand finale. Happy anniversary!",
       "color": "Green",
       "price": 12000,
@@ -87,17 +89,6 @@
       "img3": "https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/15038aaa-70af-4121-8e25-d3faf1980b91/air-force-1-low-x-undercover-black-dq7558-002-release-date.jpg",
       "img4": "https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/efa0b647-5979-47de-9a12-46c0eec31c44/air-force-1-low-x-undercover-black-dq7558-002-release-date.jpg",
       "id": 8
-    },
-    {
-      "category": "man",
-      "description": "UNDERCOVER's Jun Takahashi redefines the Air Force 1 with a trail-ready twist. The waterproof GORE-TEX fabric sleeve keeps wet conditions at bay, while a full-ankle lacing system (inspired by an all-round ACG icon, the Air Revaderchi) adds support. Utilitarian details like metal dubraes, pull tabs on the heel and a plastic tongue logo add rugged durability that seals the deal.",
-      "color": "Black",
-      "price": 14000,
-      "img1": "https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/8c9d697d-d778-443a-ae5e-fc7e328f1e16/air-force-1-low-x-undercover-black-dq7558-002-release-date.jpg",
-      "img2": "https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/17293b04-c964-4417-acc5-7dfa20d34bf2/air-force-1-low-x-undercover-black-dq7558-002-release-date.jpg",
-      "img3": "https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/15038aaa-70af-4121-8e25-d3faf1980b91/air-force-1-low-x-undercover-black-dq7558-002-release-date.jpg",
-      "img4": "https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/efa0b647-5979-47de-9a12-46c0eec31c44/air-force-1-low-x-undercover-black-dq7558-002-release-date.jpg",
-      "id": 9
     },
     {
       "category": "woman",

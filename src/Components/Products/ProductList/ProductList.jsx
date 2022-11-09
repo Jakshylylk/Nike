@@ -42,7 +42,7 @@ const ProductList = () => {
   return (
     <>
       <Grid sx={{ width: "40%" }} ml="50px" my="20px">
-        <Typography variant="h4">Filter</Typography>
+        <Typography variant="h4">FILTER</Typography>
         <Filter
           category={category}
           setCategory={setCategory}

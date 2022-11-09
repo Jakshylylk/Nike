@@ -2,10 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./HomePage.css";
 import VideoNike from "./video/VideoNike.mp4";
+import VideoNike1 from "./video/VideoNike1.mp4";
 
 const HomePage = () => {
   return (
     <>
+
       <div className="homePage-body">
         <p>
           <img
@@ -49,6 +51,7 @@ const HomePage = () => {
           Uncover the future with Tiakola and Camavinga
         </p>
       </div>
+
     </>
   );
 };
