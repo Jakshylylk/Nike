@@ -34,7 +34,6 @@ const ProductContextProvider = ({ children }) => {
   const location = useLocation();
 
   const navigate = useNavigate();
-  const location = useLocation;
 
   // ! =================== CREATE START =================
   async function addProduct(newProduct) {

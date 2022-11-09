@@ -33,40 +33,11 @@ ul {
   font-size: 20px;
   padding: 10px;
 }
-/* .product-container {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+.cardText {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.3em;
+  height: 3.9em;
 }
-ul {
-  width: 25%;
-  list-style: none;
-  padding-inline-start: 0;
-  display: flex;
-  flex-direction: row;
-}
-
-ul li img.main-img {
-  width: 35%;
-}
-ul li p {
-  font-size: large;
-}
-.sneakers-color {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  height: 100px;
-  display: none;
-}
-.sneakers-color img {
-  width: 10%;
-  margin: 5px;
-}
-ul:hover .sneakers-color {
-  display: block;
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  height: 100px;
-} */

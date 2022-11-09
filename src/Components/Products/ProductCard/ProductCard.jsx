@@ -28,7 +28,10 @@ const ProductCard = ({ productObj }) => {
                 <Typography gutterBottom variant="h5" component="div">
                   Цвет: {productObj.color}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  className="cardText">
                   <Grid>
                     <h3 style={{ color: "black" }}>Описание:</h3>
                   </Grid>
@@ -44,9 +47,6 @@ const ProductCard = ({ productObj }) => {
               }}>
               <FavoriteBorderIcon sx={{ fontSize: 30 }} />
               <MapsUgcIcon sx={{ fontSize: 30, ml: 1 }} />
-            </Grid>
-            <Grid>
-              <Button>Delete </Button>
             </Grid>
           </Card>
         </Link>
