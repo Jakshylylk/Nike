@@ -3,6 +3,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
+import Badge from "@mui/material/Badge";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -12,17 +13,20 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { alpha, styled } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LiveSearch from "../LiveSearch/LiveSearch";
 import { useLocation } from "react-router-dom";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { basketContext } from "../../Context/BasketContextProvider";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
   const location = useLocation();
+  const { basketCount } = React.useContext(basketContext);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -116,27 +120,6 @@ function Navbar() {
               color="inherit">
               <MenuIcon />
             </IconButton>
-            {/* <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{ display: { xs: "block", md: "none" } }}>
-              {pages.map(page => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
           </Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
@@ -172,12 +155,15 @@ function Navbar() {
             ) : (
               <NavLink to="/list">Products List</NavLink>
             )}
-            {/* <NavLink to="/list">Product List</NavLink> */}
-            <NavLink to="/details">Details</NavLink>
-            <NavLink to="/edit">Edit</NavLink>
           </Box>
           <LiveSearch />
+
           <Box sx={{ flexGrow: 0 }}>
+            <Link to="/basket">
+              <Badge badgeContent={basketCount} color="error">
+                <AddShoppingCartIcon />
+              </Badge>
+            </Link>
             <IconButton sx={{ color: "black" }}>
               <FavoriteBorderIcon />
             </IconButton>
@@ -189,6 +175,7 @@ function Navbar() {
                 <PersonOutlineIcon />
               </IconButton>
             </Tooltip>
+
             <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"

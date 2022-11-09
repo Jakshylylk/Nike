@@ -62,17 +62,21 @@ const LiveSearch = () => {
   }, [searchValue]);
 
   return (
-    <Search>
-      <SearchIconWrapper>
-        <SearchIcon />
-      </SearchIconWrapper>
-      <StyledInputBase
-        placeholder="Search…"
-        inputProps={{ "aria-label": "search" }}
-        value={searchValue}
-        onChange={e => setSearchValue(e.target.value)}
-      />
-    </Search>
+    <>
+      {location.pathname === "/list" ? (
+        <Search>
+          <SearchIconWrapper>
+            <SearchIcon />
+          </SearchIconWrapper>
+          <StyledInputBase
+            placeholder="Search…"
+            inputProps={{ "aria-label": "search" }}
+            value={searchValue}
+            onChange={e => setSearchValue(e.target.value)}
+          />
+        </Search>
+      ) : null}
+    </>
   );
 };
 

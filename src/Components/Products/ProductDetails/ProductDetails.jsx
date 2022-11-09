@@ -19,6 +19,8 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import { Link } from "react-router-dom";
+import { AddShoppingCart } from "@mui/icons-material";
+import { basketContext } from "../../../Context/BasketContextProvider";
 
 SwiperCore.use([Thumbs]);
 
@@ -27,6 +29,7 @@ const ProductDetails = () => {
 
   const { readOneProduct, productDetails, deleteProduct } =
     useContext(productContext);
+  const { addProductToBasket } = useContext(basketContext);
 
   const { id } = useParams();
 
@@ -53,6 +56,9 @@ const ProductDetails = () => {
                 <SwiperSlide>
                   <img src={productDetails.img3} alt={productDetails.title} />
                 </SwiperSlide>
+                <SwiperSlide>
+                  <img src={productDetails.img4} alt={productDetails.title} />
+                </SwiperSlide>
               </Swiper>
               <Swiper
                 onSwiper={setThumbsSwiper}
@@ -76,6 +82,11 @@ const ProductDetails = () => {
                     <img src={productDetails.img3} alt={productDetails.title} />
                   </Paper>
                 </SwiperSlide>
+                <SwiperSlide>
+                  <Paper elevation={3}>
+                    <img src={productDetails.img4} alt={productDetails.title} />
+                  </Paper>
+                </SwiperSlide>
               </Swiper>
             </Grid>
             <Grid item xs={6}>
@@ -85,6 +96,67 @@ const ProductDetails = () => {
                 <Typography sx={{ marginTop: "30px" }}>
                   {productDetails.description}{" "}
                 </Typography>
+                {/* ****************** */}
+                <Box style={{ width: "88%" }}>
+                  <Grid className="gridButtonContainer">
+                    <Grid className="gridButton">
+                      <button className="button"></button>
+                      <button className="button"></button>
+                      <button className="button"></button>
+                      <button className="button"></button>
+                      <button className="button"></button>
+                      <button className="button"></button>
+                      <button className="button"></button>
+                    </Grid>
+                  </Grid>
+
+                  <Grid className="gridLinkContainer">
+                    <Grid className="gridLink">
+                      <a className="linkSize" href="#">
+                        UK 3
+                      </a>
+                      <a className="linkSize" href="#">
+                        UK 3.5
+                      </a>
+                      <a className="linkSize" href="#">
+                        UK 4
+                      </a>
+                      <a className="linkSize" href="#">
+                        UK 4.5
+                      </a>
+                    </Grid>
+                    <Grid className="gridLink">
+                      <a className="linkSize" href="#">
+                        UK 5
+                      </a>
+                      <a className="linkSize" href="#">
+                        UK 5.5
+                      </a>
+                      <a className="linkSize" href="#">
+                        UK 6
+                      </a>
+
+                      <a className="linkSize" href="#">
+                        UK 6.5
+                      </a>
+                    </Grid>
+                    <Grid className="gridLink">
+                      <a className="linkSize" href="#">
+                        UK 7
+                      </a>
+                      <a className="linkSize" href="#">
+                        UK 7.5
+                      </a>
+                      <a className="linkSize" href="#">
+                        UK 8
+                      </a>
+                      <a className="linkSize" href="#">
+                        UK 8.5
+                      </a>
+                    </Grid>
+                  </Grid>
+                </Box>
+                {/* ****************** */}
                 <Alert
                   icon={<AttachMoneyIcon />}
                   sx={{
@@ -97,6 +169,13 @@ const ProductDetails = () => {
                   Цена: {productDetails.price} сом
                   <Button variant="contained" sx={{ ml: "100px" }}>
                     Купить
+                  </Button>
+                  <Button
+                    variant="contained"
+                    color="warning"
+                    sx={{ marginLeft: "20px" }}
+                    onClick={() => addProductToBasket(productDetails)}>
+                    <AddShoppingCart />
                   </Button>
                 </Alert>
                 <Box
