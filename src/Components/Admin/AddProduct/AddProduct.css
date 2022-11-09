@@ -4,26 +4,22 @@
   background-size: 100%;
   height: 100vh;
 }
-.addProduct-container {
-  width: 30%;
-  margin: 0 auto;
-  border-radius: 20px;
-  padding-top: 180px;
-}
-.addProduct-container form input {
-  width: 90%;
+#form-add {
+  width: 35%;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  margin: 10px;
-  border: none;
-  background: rgba(255, 255, 255, 0.4);
+  margin: 0px auto;
+  padding-top: 130px;
 }
-.addProduct-container form input:focus {
-  background: white;
+
+.outlined-basic {
+  height: 65px;
+  background-color: rgba(255, 255, 255, 0.4);
 }
-.addProduct-container form button {
-  width: 20%;
-  margin: 10px 170px;
-  padding: 10px;
+
+#add-title {
+  margin: 20px auto;
+  width: 35%;
+  font-size: 40px;
+  text-align: center;
 }

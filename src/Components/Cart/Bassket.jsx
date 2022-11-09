@@ -29,18 +29,35 @@ const Bassket = () => {
   return (
     <>
       <Container maxWidth="lg">
-        <Typography variant="h3"> My Basket</Typography>
+        <Typography variant="h3"> BAG</Typography>
         {productsInBasket ? (
           <>
             <TableContainer component={Paper}>
               <Table sx={{ minWidth: 650 }}>
+                <TableHead>
+                  <TableRow>
+                    <TableCell sx={{ fontWeight: "bold", fontSize: "19px" }}>
+                      Imagge
+                    </TableCell>
+                    <TableCell sx={{ fontWeight: "bold", fontSize: "19px" }}>
+                      Price
+                    </TableCell>
+                    <TableCell sx={{ fontWeight: "bold", fontSize: "19px" }}>
+                      Count
+                    </TableCell>
+                    <TableCell sx={{ fontWeight: "bold", fontSize: "19px" }}>
+                      SubPrice
+                    </TableCell>
+                    <TableCell sx={{ fontWeight: "bold", fontSize: "19px" }}>
+                      Delete
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
                 <TableBody>
                   {productsInBasket.products.map(elem => (
                     <TableRow key={elem.item.id}>
-                      <TableCell> {elem.item.title} </TableCell>
-                      <TableCell>{elem.item.model}</TableCell>
                       <TableCell>
-                        <img src={elem.item.img1} alt="Apple" width={40} />
+                        <img src={elem.item.img1} alt="Sneakers" width={420} />
                       </TableCell>
                       <TableCell> {elem.item.price}</TableCell>
                       <TableCell>

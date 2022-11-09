@@ -19,12 +19,14 @@ import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LiveSearch from "../LiveSearch/LiveSearch";
 import { useLocation } from "react-router-dom";
-
+import Sidebar from "../Drawer/Drawer";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { basketContext } from "../../Context/BasketContextProvider";
+
 import Sidebar from "../Drawer/Drawer";
 import { authContext } from "../../Context/AuthContextProvider";
 import { AccountCircle } from "@mui/icons-material";
+
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -118,41 +120,7 @@ function Navbar() {
 
           <Box
             sx={{
-              flexGrow: 1,
-              display: { xs: "flex", justifyContent: "space-evenly" },
-            }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit">
-              <MenuIcon />
-            </IconButton>
-          </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}>
-            LOGO
-          </Typography>
-
-          <Box
-            sx={{
-              width: "60%",
+              width: "30%",
               display: "flex",
               justifyContent: "space-around",
             }}>
@@ -167,18 +135,20 @@ function Navbar() {
             )}
           </Box>
           <LiveSearch />
-
+          <Sidebar />
           <Box sx={{ flexGrow: 0 }}>
-            <Link to="/basket">
-              <Badge badgeContent={basketCount} color="error">
-                <AddShoppingCartIcon />
-              </Badge>
-            </Link>
+            <IconButton sx={{ color: "black" }}>
+              <Link to="/basket">
+                <Badge badgeContent={basketCount} color="error">
+                  <AddShoppingCartIcon />
+                </Badge>
+              </Link>
+            </IconButton>
             <IconButton sx={{ color: "black" }}>
               <FavoriteBorderIcon />
             </IconButton>
             <IconButton sx={{ color: "black" }}>
-              <Button onClick={<Sidebar />}>
+              <Button>
                 <WorkOutlineIcon />
               </Button>
             </IconButton>

@@ -11,7 +11,7 @@ const ProductList = () => {
 
   const [paramsSearch, setParamsSearch] = useSearchParams();
   const [category, setCategory] = useState("all");
-  const [price, setPrice] = useState([0, 200000]);
+  const [price, setPrice] = useState([0, 100000]);
   const [page, setPage] = useState(1);
 
   useEffect(() => {
