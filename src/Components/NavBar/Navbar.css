@@ -1,0 +1,13 @@
+@media all and (max-width: 900px) {
+  .icons {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    /* padding-left: 200px; */
+  }
+  .menu-item {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -153,6 +153,7 @@
 
 // export default AddProduct;
 
+import { Button, TextField } from "@mui/material";
 import React, { useContext, useState } from "react";
 import { productContext } from "../../../Context/ProductContextProvider";
 import "./AddProduct.css";
@@ -213,59 +214,62 @@ const AddProduct = () => {
   return (
     <>
       <div className="body">
-        <div className="addProduct-container">
-          <form onSubmit={e => handleAdd(e)}>
-            <input
-              value={category}
-              onChange={e => setCategory(e.target.value)}
-              type="text"
-              placeholder="Категория"
-            />
-            <input
-              value={description}
-              onChange={e => setDescription(e.target.value)}
-              type="text"
-              placeholder="Описания"
-            />
-            <input
-              value={color}
-              onChange={e => setColor(e.target.value)}
-              type="text"
-              placeholder="Цвет"
-            />
-            <input
-              value={price}
-              onChange={e => setPrice(e.target.value)}
-              type="number"
-              placeholder="Цена"
-            />
-            <input
-              value={img1}
-              onChange={e => setImg1(e.target.value)}
-              type="text"
-              placeholder="Добавить 1 картинку"
-            />
-            <input
-              value={img2}
-              onChange={e => setImg2(e.target.value)}
-              type="text"
-              placeholder="Добавить 2 картинку"
-            />
-            <input
-              value={img3}
-              onChange={e => setImg3(e.target.value)}
-              type="text"
-              placeholder="Добавить 3 картинку"
-            />
-            <input
-              value={img4}
-              onChange={e => setImg4(e.target.value)}
-              type="text"
-              placeholder="Добавить 4 картинку"
-            />
-            <button type="submit">Добавить</button>
-          </form>
-        </div>
+        <form id="form-add" onSubmit={e => handleAdd(e)}>
+          <TextField
+            className="outlined-basic"
+            label="Категория"
+            variant="outlined"
+            value={category}
+            onChange={e => setCategory(e.target.value)}
+          />
+          <TextField
+            className="outlined-basic"
+            label="Описание"
+            variant="outlined"
+            value={description}
+            onChange={e => setDescription(e.target.value)}
+          />
+          <TextField
+            className="outlined-basic"
+            vlauue={color}
+            onChange={e => setColor(e.target.value)}
+            label="Цвет"
+            variant="outlined"
+          />
+          <TextField
+            className="outlined-basic"
+            type="number"
+            vlauue={price}
+            onChange={e => setPrice(e.target.value)}
+            label="Цена"
+            variant="outlined"
+          />
+
+          <TextField
+            className="outlined-basic"
+            label="Фото 1"
+            variant="outlined"
+            value={img1}
+            onChange={e => setImg1(e.target.value)}
+          />
+          <TextField
+            className="outlined-basic"
+            label="Фото 2"
+            variant="outlined"
+            value={img2}
+            onChange={e => setImg2(e.target.value)}
+          />
+          <TextField
+            className="outlined-basic"
+            label="Фото 3"
+            variant="outlined"
+            value={img3}
+            onChange={e => setImg3(e.target.value)}
+          />
+          <Button variant="contained" type="submit">
+            Добавить
+          </Button>
+        </form>
       </div>
     </>
   );
