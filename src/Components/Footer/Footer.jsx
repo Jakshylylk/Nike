@@ -45,60 +45,53 @@ const Footer = () => {
 
               <Grid item xs={12} sm={4}>
                 <Box borderBottom={0} style={{ fontSize: "25px" }}>
-                  Информация
+                  INFO
                 </Box>
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    Доставка
+                    DELIVERY
                   </Link>
                 </Box>
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    О нас
+                    ABOUT US
                   </Link>
                 </Box>
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    Контакты
+                    CONTACTS
                   </Link>
                 </Box>
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    Новости
+                    NEW
                   </Link>
                 </Box>
               </Grid>
               <Grid item xs={12} sm={4}>
                 <Box borderBottom={0} style={{ fontSize: "25px" }}>
-                  Категории
+                  CATEGORY
                 </Box>
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    Смартфоны
+                    MAN
                   </Link>
                 </Box>
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    Ноутбуки
-                  </Link>
-                </Box>
-                <Box>
-                  <Link
-                    href="/"
-                    style={{ color: "white", textDecoration: "none" }}>
-                    Планшеты
+                    WOMAN
                   </Link>
                 </Box>
               </Grid>

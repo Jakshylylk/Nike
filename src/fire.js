@@ -3,12 +3,12 @@ import "firebase/compat/app";
 import "firebase/compat/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBUpIA1p7x7Car6xWjp80_P49JCsyL7hRc",
-  authDomain: "js25-online-shop-49c79.firebaseapp.com",
-  projectId: "js25-online-shop-49c79",
-  storageBucket: "js25-online-shop-49c79.appspot.com",
-  messagingSenderId: "880264274870",
-  appId: "1:880264274870:web:fedde76c4b9d3f72c11717",
+  apiKey: "AIzaSyBtNnwxL_-HsPd5Gjq3O_kRn0-KDQ5Mrrk",
+  authDomain: "nike-jaku-adik.firebaseapp.com",
+  projectId: "nike-jaku-adik",
+  storageBucket: "nike-jaku-adik.appspot.com",
+  messagingSenderId: "312771973461",
+  appId: "1:312771973461:web:c140cc4221c8487c601fdc",
 };
 
 const fire = firebase.initializeApp(firebaseConfig);
