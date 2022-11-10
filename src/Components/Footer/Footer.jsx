@@ -71,19 +71,24 @@ const Footer = () => {
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
+
                     NEWS
+
                   </Link>
                 </Box>
               </Grid>
               <Grid item xs={12} sm={4}>
                 <Box borderBottom={0} style={{ fontSize: "25px" }}>
                   CATEGORY
+
+
                 </Box>
                 <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
+
                     MAN
                   </Link>
                 </Box>
@@ -92,6 +97,7 @@ const Footer = () => {
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
+
                     WOMAN
                   </Link>
                 </Box>
