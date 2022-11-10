@@ -21,6 +21,7 @@ import "swiper/swiper.min.css";
 import { Link } from "react-router-dom";
 import { AddShoppingCart } from "@mui/icons-material";
 import { basketContext } from "../../../Context/BasketContextProvider";
+import { authContext } from "../../../Context/AuthContextProvider";
 
 SwiperCore.use([Thumbs]);
 
@@ -30,6 +31,7 @@ const ProductDetails = () => {
   const { readOneProduct, productDetails, deleteProduct } =
     useContext(productContext);
   const { addProductToBasket } = useContext(basketContext);
+  const { user, handleLogout } = useContext(authContext);
 
   const { id } = useParams();
 
@@ -178,30 +180,32 @@ const ProductDetails = () => {
                     <AddShoppingCart />
                   </Button>
                 </Alert>
-                <Box
-                  sx={{
-                    mt: "15px",
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}>
-                  <Button
-                    variant="contained"
-                    color="error"
-                    sx={{ width: "48%" }}
-                    onClick={() => deleteProduct(id)}>
-                    Delete
-                  </Button>
-                  <Link
-                    to={`/edit/${productDetails.id}`}
-                    style={{ width: "50%" }}>
+                {user.email === "admin.admin@mail.ru" ? (
+                  <Box
+                    sx={{
+                      mt: "15px",
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}>
                     <Button
                       variant="contained"
-                      color="warning"
-                      sx={{ width: "48%" }}>
-                      Edit
+                      color="error"
+                      sx={{ width: "48%" }}
+                      onClick={() => deleteProduct(id)}>
+                      Delete
                     </Button>
-                  </Link>
-                </Box>
+                    <Link
+                      to={`/edit/${productDetails.id}`}
+                      style={{ width: "50%" }}>
+                      <Button
+                        variant="contained"
+                        color="warning"
+                        sx={{ width: "48%" }}>
+                        Edit
+                      </Button>
+                    </Link>
+                  </Box>
+                ) : null}
               </Paper>
             </Grid>
           </Grid>

@@ -23,9 +23,7 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { basketContext } from "../../Context/BasketContextProvider";
 
 import { authContext } from "../../Context/AuthContextProvider";
-import { AccountCircle } from "@mui/icons-material";
-
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+import "./Navbar.css";
 
 function Navbar() {
   const location = useLocation();
@@ -33,7 +31,7 @@ function Navbar() {
   const { basketCount } = React.useContext(basketContext);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const { user, handleLogOut } = React.useContext(authContext);
+  const { user, handleLogout } = React.useContext(authContext);
   const handleProfileMenuOpen = event => {
     setAnchorEl(event.currentTarget);
   };
@@ -122,7 +120,11 @@ function Navbar() {
               justifyContent: "space-around",
             }}>
             <NavLink to="/">HOME</NavLink>
-            <NavLink to="/add">ADD PRODUCT</NavLink>
+            {user.email === "admin.admin@mail.ru" ? (
+              <NavLink to="/add" style={{ color: "black" }}>
+                ADD PRODUCT
+              </NavLink>
+            ) : null}
             {location.pathname === "/list" ? (
               <span style={{ cursor: "pointer", color: "black" }}>
                 Products List
@@ -132,7 +134,9 @@ function Navbar() {
             )}
           </Box>
           <LiveSearch />
-          <Box sx={{ flexGrow: 0, width: "120%" }}>
+
+          <Box sx={{ flexGrow: 0 }}>
+
             <IconButton sx={{ color: "black" }}>
               <Link to="/basket">
                 <Badge badgeContent={basketCount} color="error">
@@ -165,37 +169,22 @@ function Navbar() {
               }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}>
-              {settings.map(setting => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              <Link to="/auth">
+                <Typography>LOGIN</Typography>
+              </Link>
+              <MenuItem onClick={handleCloseUserMenu}>
+                <Link to="/">
+                  {user.email ? user.email : <span>Не зашел</span>}
+                </Link>
+              </MenuItem>
+              <Button onClick={handleLogout} sx={{ color: "black" }}>
+                LogOut
+              </Button>
             </Menu>
-
-            <Link to="/">
-              {user.email ? user.email : <span>Не зашел</span>}
-            </Link>
-            <Button onClick={handleLogOut} sx={{ color: "black" }}>
-              LogOut
-            </Button>
-
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"></IconButton>
-
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit">
-              <Link to="/auth">
-                <AccountCircle />
-              </Link>
-            </IconButton>
           </Box>
         </Toolbar>
       </Container>
