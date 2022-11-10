@@ -19,14 +19,11 @@ import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LiveSearch from "../LiveSearch/LiveSearch";
 import { useLocation } from "react-router-dom";
-import Sidebar from "../Drawer/Drawer";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { basketContext } from "../../Context/BasketContextProvider";
 
-import Sidebar from "../Drawer/Drawer";
 import { authContext } from "../../Context/AuthContextProvider";
 import { AccountCircle } from "@mui/icons-material";
-
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -135,23 +132,18 @@ function Navbar() {
             )}
           </Box>
           <LiveSearch />
-          <Sidebar />
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0, width: "120%" }}>
             <IconButton sx={{ color: "black" }}>
               <Link to="/basket">
                 <Badge badgeContent={basketCount} color="error">
-                  <AddShoppingCartIcon />
+                  <WorkOutlineIcon />
                 </Badge>
               </Link>
             </IconButton>
             <IconButton sx={{ color: "black" }}>
               <FavoriteBorderIcon />
             </IconButton>
-            <IconButton sx={{ color: "black" }}>
-              <Button>
-                <WorkOutlineIcon />
-              </Button>
-            </IconButton>
+
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ color: "black" }}>
                 <PersonOutlineIcon />
