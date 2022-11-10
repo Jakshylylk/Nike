@@ -18,87 +18,81 @@ const Footer = () => {
             <Grid container spacing={5} style={{ textAlign: "center" }}>
               <Grid item xs={12} sm={4}>
                 <Box borderBottom={0} style={{ fontSize: "25px" }}>
-                  Контакты
+                  СONTACT
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    +996 701 320 055
+                    +996 777 77 77 77
                   </Link>
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    г.Бишкек, ул. Абдрахманова 129
-                  </Link>
-                </Box>
-                <Box>
-                  <Link
-                    href="/"
-                    style={{ color: "white", textDecoration: "none" }}>
-                    График работы: c 10:00 - 21:00
+                    BISHKEK, street TABYSHALIEVA 29
                   </Link>
                 </Box>
               </Grid>
 
               <Grid item xs={12} sm={4}>
                 <Box borderBottom={0} style={{ fontSize: "25px" }}>
-                  Информация
+                  INFO
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    Доставка
+                    DELIVERY
                   </Link>
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    О нас
+                    ABOUT US
                   </Link>
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    Контакты
+                    CONTACTS
                   </Link>
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    Новости
+                    NEWS
                   </Link>
                 </Box>
               </Grid>
               <Grid item xs={12} sm={4}>
                 <Box borderBottom={0} style={{ fontSize: "25px" }}>
-                  Категории
+                  CATEGORY
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    Смартфоны
+                    MAN
                   </Link>
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    Ноутбуки
-                  </Link>
-                </Box>
-                <Box>
-                  <Link
-                    href="/"
-                    style={{ color: "white", textDecoration: "none" }}>
-                    Планшеты
+                    WOMAN
                   </Link>
                 </Box>
               </Grid>
