@@ -136,7 +136,6 @@ function Navbar() {
           <LiveSearch />
 
           <Box sx={{ flexGrow: 0 }}>
-
             <IconButton sx={{ color: "black" }}>
               <Link to="/basket">
                 <Badge badgeContent={basketCount} color="error">

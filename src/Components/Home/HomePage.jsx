@@ -7,7 +7,6 @@ import VideoNike1 from "./video/VideoNike1.mp4";
 const HomePage = () => {
   return (
     <>
-
       <div className="homePage-body">
         <p>
           <img
@@ -50,8 +49,31 @@ const HomePage = () => {
           <br />
           Uncover the future with Tiakola and Camavinga
         </p>
+        <h2>National Team Collections</h2>
+        <p>
+          <img
+            src="https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/w_1423,c_limit/dfda0f5a-79a6-40a7-9cbf-c9a0f2a1c01d/nike-just-do-it.jpg"
+            alt="# "
+          />
+        </p>
+        <h1>FOOTBALL IS NEVER DONE</h1>
+        <p>The 2022 England National Team Collection.</p>
+        <button class="button-89" role="button">
+          <NavLink to="/list">SHOP</NavLink>
+        </button>
+        <video
+          src={VideoNike1}
+          autoPlay={true}
+          width="100%"
+          controls={true}
+          muted></video>
+        <p>
+          Future Icons
+          <h1> Air Max TW</h1>
+          <br />
+          Uncover the future with Tiakola and Camavinga
+        </p>
       </div>
-
     </>
   );
 };

@@ -18,27 +18,22 @@ const Footer = () => {
             <Grid container spacing={5} style={{ textAlign: "center" }}>
               <Grid item xs={12} sm={4}>
                 <Box borderBottom={0} style={{ fontSize: "25px" }}>
-                  Контакты
+                  СONTACT
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    +996 701 320 055
+                    +996 777 77 77 77
                   </Link>
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    г.Бишкек, ул. Абдрахманова 129
-                  </Link>
-                </Box>
-                <Box>
-                  <Link
-                    href="/"
-                    style={{ color: "white", textDecoration: "none" }}>
-                    График работы: c 10:00 - 21:00
+                    BISHKEK, street TABYSHALIEVA 29
                   </Link>
                 </Box>
               </Grid>
@@ -47,6 +42,7 @@ const Footer = () => {
                 <Box borderBottom={0} style={{ fontSize: "25px" }}>
                   INFO
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
@@ -54,6 +50,7 @@ const Footer = () => {
                     DELIVERY
                   </Link>
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
@@ -61,6 +58,7 @@ const Footer = () => {
                     ABOUT US
                   </Link>
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
@@ -68,29 +66,38 @@ const Footer = () => {
                     CONTACTS
                   </Link>
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
-                    NEW
+
+                    NEWS
+
                   </Link>
                 </Box>
               </Grid>
               <Grid item xs={12} sm={4}>
                 <Box borderBottom={0} style={{ fontSize: "25px" }}>
                   CATEGORY
+
+
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
+
                     MAN
                   </Link>
                 </Box>
+                <br />
                 <Box>
                   <Link
                     href="/"
                     style={{ color: "white", textDecoration: "none" }}>
+
                     WOMAN
                   </Link>
                 </Box>
