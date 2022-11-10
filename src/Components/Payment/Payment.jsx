@@ -13,7 +13,7 @@ import {
 import React, { useContext, useEffect } from "react";
 import { basketContext } from "../../Context/BasketContextProvider";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-import "./Bassket.css";
+import "./Payment.css";
 
 const Bassket = () => {
   const {
