@@ -2,7 +2,6 @@
   "products": [
     {
       "category": "man",
-
       "description": "So you're in love with the classic look of the '90s, but you've got a thing for today's fast-paced culture. Meet the Air Max TW.",
       "color": "Black",
       "price": "11000",
@@ -14,7 +13,6 @@
     },
     {
       "category": "man",
-
       "description": "Celebrating 40 years of pushing sport and fashion boundaries, this commemorative AF-1 mixes elements from beloved launches to highlight the timeless design's place in sneaker history. Gold accents, a debossed *40* on the heel and an honorary tongue label are just a few of the embellishments inviting you to the party. Completing the look, crisp leather in bold colours delivers a grand finale. Happy anniversary!",
       "color": "Green",
       "price": 12000,
