@@ -18,7 +18,7 @@ function reducer(prevState, action) {
       return {
         ...prevState,
         product: action.payload.data,
-        pageTotalCount: Math.ceil(action.payload.headers["x-total-count"] / 6),
+        pageTotalCount: Math.ceil(action.payload.headers["x-total-count"] / 7),
       };
 
     case "GET_ONE_PRODUCT":
