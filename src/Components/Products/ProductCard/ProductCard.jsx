@@ -9,8 +9,11 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import MapsUgcIcon from "@mui/icons-material/MapsUgc";
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
+import { width } from "@mui/system";
 
 const ProductCard = ({ productObj }) => {
+  let background = productObj.color;
+  let style = { background };
   return (
     <>
       {
@@ -25,8 +28,21 @@ const ProductCard = ({ productObj }) => {
               />
 
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                  sx={{ display: "flex" }}>
                   Цвет: {productObj.color}
+                  <Grid
+                    style={style}
+                    sx={{
+                      width: "30px",
+                      height: "30px",
+                      ml: "10px",
+                      border: "2px solid black",
+                      borderRadius: "10px",
+                    }}></Grid>
                 </Typography>
                 <Typography
                   variant="body2"

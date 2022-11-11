@@ -107,7 +107,8 @@ function Navbar() {
               display: { md: "flex" },
               width: 140,
               height: 65,
-            }}>
+            }}
+            className="logo-icon">
             {
               <img src="https://www.freeiconspng.com/thumbs/nike-logo/black-nike-logo-no-background-20.jpg" />
             }
@@ -118,7 +119,8 @@ function Navbar() {
               width: "30%",
               display: "flex",
               justifyContent: "space-around",
-            }}>
+            }}
+            className="menu-item">
             <NavLink to="/">HOME</NavLink>
             {user.email === "admin.admin@mail.ru" ? (
               <NavLink to="/add" style={{ color: "black" }}>
