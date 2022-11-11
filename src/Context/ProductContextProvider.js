@@ -18,6 +18,7 @@ function reducer(prevState, action) {
       return {
         ...prevState,
         product: action.payload.data,
+
         pageTotalCount: Math.ceil(action.payload.headers["x-total-count"] / 8),
       };
 
